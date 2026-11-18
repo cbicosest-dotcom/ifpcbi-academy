@@ -350,3 +350,122 @@ footer p + p {
     letter-spacing: 1px;
   }
 }
+
+/* =====================================
+   SECTION DES FORMATIONS - PAGE ACCUEIL
+===================================== */
+
+.formations-section {
+  padding: 70px 20px;
+  background: #f5f8fc;
+}
+
+.formations-section .section-heading {
+  max-width: 850px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.formations-section .section-label {
+  display: inline-block;
+  color: #b58a35;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.formations-section .section-heading h2 {
+  color: #102b50;
+  font-size: clamp(25px, 4vw, 38px);
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.formations-section .section-heading p {
+  color: #526174;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.formations-section .formation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.formations-section .formation-card {
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 5px 20px rgba(16, 43, 80, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formations-section .formation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(16, 43, 80, 0.13);
+}
+
+.formations-section .formation-card-header {
+  background: #102b50;
+  color: #ffffff;
+  padding: 22px;
+}
+
+.formations-section .formation-card-header span {
+  color: #e4bd69;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.formations-section .formation-card-header h2 {
+  color: #ffffff;
+  font-size: 21px;
+  margin-top: 10px;
+}
+
+.formations-section .formation-card-content {
+  padding: 22px;
+}
+
+.formations-section .formation-card-content p {
+  color: #526174;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.formations-section .formation-link {
+  display: inline-block;
+  background: #b58a35;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+.formations-section .formation-link:hover {
+  background: #102b50;
+}
+
+@media (max-width: 600px) {
+  .formations-section {
+    padding: 45px 15px;
+  }
+
+  .formations-section .formation-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .formations-section .formation-card-header h2 {
+    font-size: 19px;
+  }
+}
