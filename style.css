@@ -1,0 +1,352 @@
+
+/* =================================
+   IFPCBI ACADEMY - DESIGN OFFICIEL
+================================= */
+
+:root {
+  --navy: #102B46;
+  --blue: #174A78;
+  --gold: #D6AD55;
+  --white: #FFFFFF;
+  --light: #F4F7FA;
+  --text: #263748;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+
+.header {
+  background: var(--navy);
+  color: white;
+  padding: 15px 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.logo small {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* BUTTONS */
+
+.btn,
+.btn-outline {
+  display: inline-block;
+  padding: 12px 23px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btn:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--navy);
+}
+
+/* HERO */
+
+.hero {
+  background:
+    linear-gradient(110deg, rgba(10,31,52,.97), rgba(23,74,120,.88));
+  color: white;
+  padding: 110px 0 90px;
+  min-height: 530px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+  display: block;
+}
+
+.hero-content > p:not(.eyebrow) {
+  max-width: 680px;
+  margin-bottom: 25px;
+  color: #E5ECF3;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.slogan {
+  margin-top: 45px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--gold);
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 85px 0;
+}
+
+.section h2 {
+  font-size: clamp(27px, 4vw, 38px);
+  color: var(--navy);
+  margin-bottom: 25px;
+}
+
+.section p {
+  max-width: 850px;
+}
+
+.formations {
+  background: var(--light);
+}
+
+.formations .container > h2 {
+  margin-bottom: 35px;
+}
+
+/* FORMATION CARDS */
+
+.formation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.formation-card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 10px;
+  border-bottom: 4px solid var(--gold);
+  box-shadow: 0 5px 22px rgba(16,43,70,.07);
+  transition: 0.3s;
+}
+
+.formation-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(16,43,70,.13);
+}
+
+.formation-card h3 {
+  color: var(--navy);
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.formation-card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.formation-card a {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* INSCRIPTION */
+
+.inscription {
+  text-align: center;
+  background: var(--navy);
+  color: white;
+}
+
+.inscription h2 {
+  color: white;
+  max-width: 750px;
+  margin: 0 auto 20px;
+}
+
+.inscription p {
+  margin: 0 auto 30px;
+}
+
+/* CONTACT */
+
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  margin: 10px auto;
+}
+
+/* FOOTER */
+
+footer {
+  background: #091C2E;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 13px;
+}
+
+footer p + p {
+  color: var(--gold);
+  margin-top: 8px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 850px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .formation-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 92%;
+  }
+
+  .header {
+    padding: 12px 0;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .nav > .btn {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 75px 0;
+    min-height: auto;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons a {
+    text-align: center;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .formation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formation-card {
+    padding: 25px 20px;
+  }
+
+  .slogan {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
