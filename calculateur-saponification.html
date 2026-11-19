@@ -278,35 +278,281 @@ footer {
   Outil pédagogique de formulation cosmétique
 </footer>
 
+ 
 <script>
+// ==========================================
+// IFPCBI SAPONIFICATION PRO
+// MOTEUR SCIENTIFIQUE DE CALCUL
+// ==========================================
+
+// Indices SAP NaOH indicatifs (g NaOH / g de matière grasse)
+// Les indices KOH sont calculés par conversion molaire.
+const SAP_NAOH = {
+  coco: 0.183,
+  olive: 0.134,
+  palme: 0.142,
+  ricin: 0.128,
+  karite: 0.128,
+  cacao: 0.137,
+  arachide: 0.136,
+  tournesol: 0.135,
+  soja: 0.136,
+  palmiste: 0.176
+};
+
+const NOMS_HUILES = {
+  coco: "Huile de coco",
+  olive: "Huile d'olive",
+  palme: "Huile de palme",
+  ricin: "Huile de ricin",
+  karite: "Beurre de karité",
+  cacao: "Beurre de cacao",
+  arachide: "Huile d'arachide",
+  tournesol: "Huile de tournesol",
+  soja: "Huile de soja",
+  palmiste: "Huile de palmiste"
+};
+
+// Rapport des masses molaires KOH / NaOH
+const FACTEUR_KOH = 56.1056 / 39.997;
+
+// Arrondi pour affichage
+function arrondir(nombre, decimales = 2) {
+  return Number(nombre.toFixed(decimales));
+}
+
+// Formatage des résultats
+function formatGrammes(nombre) {
+  return arrondir(nombre).toLocaleString("fr-FR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }) + " g";
+}
+
+// Validation d'un nombre
+function lireNombre(id) {
+  const valeur = document.getElementById(id).value.trim();
+
+  if (valeur === "") return NaN;
+
+  return Number(valeur);
+}
+
+// Ajouter une matière grasse
 function ajouterHuile() {
   const ligne = document.createElement("tr");
+
   ligne.innerHTML = `
     <td>
       <select class="huile">
-        <option value="coco">Huile de coco</option>
-        <option value="olive">Huile d'olive</option>
-        <option value="palme">Huile de palme</option>
-        <option value="ricin">Huile de ricin</option>
-        <option value="karite">Beurre de karité</option>
-        <option value="cacao">Beurre de cacao</option>
-        <option value="arachide">Huile d'arachide</option>
-        <option value="tournesol">Huile de tournesol</option>
-        <option value="soja">Huile de soja</option>
-        <option value="palmiste">Huile de palmiste</option>
+        ${Object.entries(NOMS_HUILES).map(([code, nom]) =>
+          `<option value="${code}">${nom}</option>`
+        ).join("")}
       </select>
     </td>
-    <td><input type="number" class="masse" min="0" step="0.1" placeholder="Masse en g"></td>
-    <td><button class="danger" onclick="supprimerHuile(this)">X</button></td>
+    <td>
+      <input type="number" class="masse"
+      min="0" step="0.1" placeholder="Masse en g">
+    </td>
+    <td>
+      <button class="danger" onclick="supprimerHuile(this)">X</button>
+    </td>
   `;
+
   document.getElementById("huile-list").appendChild(ligne);
 }
 
+// Supprimer une matière grasse
 function supprimerHuile(btn) {
   const lignes = document.querySelectorAll("#huile-list tr");
-  if (lignes.length > 1) btn.closest("tr").remove();
+
+  if (lignes.length > 1) {
+    btn.closest("tr").remove();
+  }
 }
 
+// Afficher une erreur
+function erreur(message) {
+  document.getElementById("message").textContent = message;
+  document.getElementById("rapport").textContent =
+    "Corrigez les paramètres avant de générer le rapport.";
+}
+
+// ==========================================
+// CALCUL PRINCIPAL
+// ==========================================
+
+function calculer() {
+
+  const typeAlcali = document.getElementById("alcali").value;
+
+  const surgraissage = lireNombre("surgras");
+  const concentration = lireNombre("concentration");
+  const purete = lireNombre("purete");
+
+  // Vérification des paramètres
+  if (
+    !Number.isFinite(surgraissage) ||
+    surgraissage < 0 ||
+    surgraissage > 20
+  ) {
+    erreur("Le surgraissage doit être compris entre 0 et 20 %.");
+    return;
+  }
+
+  if (
+    !Number.isFinite(concentration) ||
+    concentration <= 0 ||
+    concentration >= 100
+  ) {
+    erreur("La concentration doit être supérieure à 0 et inférieure à 100 %.");
+    return;
+  }
+
+  if (
+    !Number.isFinite(purete) ||
+    purete <= 0 ||
+    purete > 100
+  ) {
+    erreur("La pureté doit être supérieure à 0 et inférieure ou égale à 100 %.");
+    return;
+  }
+
+  const lignes = document.querySelectorAll("#huile-list tr");
+
+  let masseTotale = 0;
+  let besoinTheorique = 0;
+  let details = [];
+
+  // Calcul de chaque matière grasse
+  for (const ligne of lignes) {
+
+    const code = ligne.querySelector(".huile").value;
+    const masse = Number(ligne.querySelector(".masse").value);
+
+    if (!Number.isFinite(masse) || masse <= 0) {
+      erreur("Veuillez saisir une masse positive pour chaque matière grasse.");
+      return;
+    }
+
+    const sapNaOH = SAP_NAOH[code];
+
+    if (!sapNaOH) {
+      erreur("Indice SAP introuvable pour une matière grasse.");
+      return;
+    }
+
+    const sapUtilise =
+      typeAlcali === "NaOH"
+        ? sapNaOH
+        : sapNaOH * FACTEUR_KOH;
+
+    const besoin = masse * sapUtilise;
+
+    masseTotale += masse;
+    besoinTheorique += besoin;
+
+    details.push({
+      nom: NOMS_HUILES[code],
+      masse: masse,
+      sap: sapUtilise,
+      besoin: besoin
+    });
+  }
+
+  // Surgraissage
+  const besoinApresSurgras =
+    besoinTheorique * (1 - surgraissage / 100);
+
+  // Correction de la pureté
+  const masseAlcali =
+    besoinApresSurgras / (purete / 100);
+
+  // Concentration de la solution calculée
+  // sur la masse d'alcali commercial à peser.
+  const masseEau =
+    masseAlcali * (100 - concentration) / concentration;
+
+  const masseLessive = masseAlcali + masseEau;
+  const masseTotaleFormule = masseTotale + masseLessive;
+
+  // Mise à jour des résultats
+  document.getElementById("total-huiles").textContent =
+    formatGrammes(masseTotale);
+
+  document.getElementById("alcali-theorique").textContent =
+    formatGrammes(besoinTheorique);
+
+  document.getElementById("alcali-reel").textContent =
+    formatGrammes(masseAlcali);
+
+  document.getElementById("eau").textContent =
+    formatGrammes(masseEau);
+
+  // Rapport technique
+  const nomFormule =
+    document.getElementById("nom").value.trim() ||
+    "Formulation sans nom";
+
+  const unite = typeAlcali === "NaOH"
+    ? "Soude caustique (NaOH)"
+    : "Potasse caustique (KOH)";
+
+  const lignesRapport = details.map(d => `
+    <tr>
+      <td>${d.nom}</td>
+      <td>${formatGrammes(d.masse)}</td>
+      <td>${arrondir(d.sap, 4)}</td>
+      <td>${formatGrammes(d.besoin)}</td>
+    </tr>
+  `).join("");
+
+  document.getElementById("rapport").innerHTML = `
+    <h3>${nomFormule}</h3>
+    <p><strong>Alcali :</strong> ${unite}</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Matière grasse</th>
+            <th>Masse</th>
+            <th>Indice SAP</th>
+            <th>Alcali théorique</th>
+          </tr>
+        </thead>
+        <tbody>${lignesRapport}</tbody>
+      </table>
+    </div>
+
+    <h3>Paramètres de fabrication</h3>
+    <p>Surgraissage : ${surgraissage} %</p>
+    <p>Concentration : ${concentration} %</p>
+    <p>Pureté de l'alcali : ${purete} %</p>
+
+    <h3>Composition calculée</h3>
+    <p>Masse totale des huiles : ${formatGrammes(masseTotale)}</p>
+    <p>Besoin théorique en alcali pur : ${formatGrammes(besoinTheorique)}</p>
+    <p>Besoin après surgraissage : ${formatGrammes(besoinApresSurgras)}</p>
+    <p><strong>Alcali commercial à peser : ${formatGrammes(masseAlcali)}</strong></p>
+    <p><strong>Eau à peser : ${formatGrammes(masseEau)}</strong></p>
+    <p>Masse de la solution alcaline : ${formatGrammes(masseLessive)}</p>
+    <p>Masse totale initiale de la formule : ${formatGrammes(masseTotaleFormule)}</p>
+
+    <p class="notice">
+      Les indices SAP sont indicatifs. Vérifiez les certificats
+      d'analyse et les caractéristiques des matières premières.
+      Ce calcul ne remplace pas les essais de contrôle qualité.
+    </p>
+  `;
+
+  document.getElementById("message").textContent =
+    "Calcul effectué. Vérifiez les paramètres et les indices SAP avant fabrication.";
+}
+
+// ==========================================
+// FIN DU MOTEUR
+// ==========================================
 </script>
-</body>
+
 </html>
