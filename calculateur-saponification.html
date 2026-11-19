@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123c32">
+<meta name="description" content="Calculateur expert de saponification IFPCBI : calcul NaOH, KOH, surgraissage, eau et formulation de savons.">
+<title>IFPCBI Saponification Pro</title>
+<style>
+:root {
+  --green:#123c32;
+  --green2:#1c6952;
+  --gold:#c5a45b;
+  --bg:#f3f6f4;
+  --white:#ffffff;
+  --text:#24332d;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+header {
+  background:linear-gradient(135deg,var(--green),#205e4c);
+  color:white;
+  padding:25px 16px;
+  text-align:center;
+  border-bottom:4px solid var(--gold);
+}
+header h1 {margin:0;font-size:25px}
+header p {margin:9px 0 0;font-size:13px;color:#e4eee9}
+.container {
+  max-width:1100px;
+  margin:22px auto;
+  padding:0 14px;
+}
+.panel {
+  background:white;
+  padding:20px;
+  margin-bottom:18px;
+  border-radius:13px;
+  box-shadow:0 3px 14px #173d3210;
+}
+h2 {
+  color:var(--green);
+  font-size:18px;
+  margin-top:0;
+  border-bottom:1px solid #e4eae6;
+  padding-bottom:12px;
+}
+label {
+  display:block;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:7px;
+}
+input,select {
+  width:100%;
+  padding:12px;
+  border:1px solid #d5ded8;
+  border-radius:8px;
+  font-size:15px;
+  background:white;
+}
+.field {margin-bottom:15px}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:14px;
+}
+button {
+  border:0;
+  border-radius:8px;
+  padding:13px 17px;
+  font-size:14px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.primary {
+  background:var(--green2);
+  color:white;
+}
+.secondary {
+  background:#e9f1ec;
+  color:var(--green);
+}
+.danger {
+  background:#fff0ed;
+  color:#a52d24;
+  padding:9px;
+}
+.actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.table-wrap {overflow-x:auto}
+table {
+  width:100%;
+  border-collapse:collapse;
+  min-width:480px;
+}
+th,td {
+  padding:11px 8px;
+  border-bottom:1px solid #e8ede9;
+  text-align:left;
+  font-size:13px;
+}
+th {background:#edf3ef;color:var(--green)}
+.results {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px;
+}
+.result {
+  background:#edf5f0;
+  padding:17px;
+  border-radius:10px;
+  border-left:3px solid var(--gold);
+}
+.result span {
+  display:block;
+  font-size:12px;
+  color:#53675c;
+}
+.result strong {
+  display:block;
+  font-size:22px;
+  color:var(--green);
+  margin-top:8px;
+}
+.notice {
+  background:#fff8e8;
+  border-left:4px solid var(--gold);
+  padding:13px;
+  font-size:13px;
+  line-height:1.6;
+}
+footer {
+  text-align:center;
+  padding:25px;
+  color:#617067;
+  font-size:12px;
+}
+@media(max-width:600px) {
+  header h1 {font-size:21px}
+  .panel {padding:15px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>IFPCBI SAPONIFICATION PRO</h1>
+  <p>CALCULATEUR SCIENTIFIQUE DE SAPONIFICATION</p>
+  <p>Apprendre • Comprendre • Réussir • Savoir-faire</p>
+</header>
+
+<main class="container">
+
+<section class="panel">
+  <h2>01 — Informations de formulation</h2>
+  <div class="grid">
+    <div class="field">
+      <label for="nom">Nom de la formulation</label>
+      <input id="nom" placeholder="Ex : Savon karité et coco">
+    </div>
+    <div class="field">
+      <label for="alcali">Alcali utilisé</label>
+      <select id="alcali">
+        <option value="NaOH">Soude caustique (NaOH)</option>
+        <option value="KOH">Potasse caustique (KOH)</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>02 — Matières grasses</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Matière grasse</th>
+          <th>Masse (g)</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="huile-list">
+        <tr>
+          <td>
+            <select class="huile">
+              <option value="coco">Huile de coco</option>
+              <option value="olive">Huile d'olive</option>
+              <option value="palme">Huile de palme</option>
+              <option value="ricin">Huile de ricin</option>
+              <option value="karite">Beurre de karité</option>
+              <option value="cacao">Beurre de cacao</option>
+              <option value="arachide">Huile d'arachide</option>
+              <option value="tournesol">Huile de tournesol</option>
+              <option value="soja">Huile de soja</option>
+              <option value="palmiste">Huile de palmiste</option>
+            </select>
+          </td>
+          <td><input type="number" class="masse" min="0" step="0.1" placeholder="1000"></td>
+          <td><button class="danger" onclick="supprimerHuile(this)">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <button class="secondary" onclick="ajouterHuile()">+ Ajouter une matière grasse</button>
+</section>
+
+<section class="panel">
+  <h2>03 — Paramètres de calcul</h2>
+  <div class="grid">
+    <div class="field">
+      <label for="surgras">Surgraissage (%)</label>
+      <input id="surgras" type="number" min="0" max="20" step="0.5" value="5">
+    </div>
+    <div class="field">
+      <label for="concentration">Concentration de la lessive (%)</label>
+      <input id="concentration" type="number" min="1" max="50" step="0.5" value="30">
+    </div>
+    <div class="field">
+      <label for="purete">Pureté de l'alcali (%)</label>
+      <input id="purete" type="number" min="1" max="100" step="0.1" value="98">
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>04 — Résultats de formulation</h2>
+  <div class="results">
+    <div class="result">
+      <span>Masse totale des huiles</span>
+      <strong id="total-huiles">0 g</strong>
+    </div>
+    <div class="result">
+      <span>Besoin théorique en alcali pur</span>
+      <strong id="alcali-theorique">0 g</strong>
+    </div>
+    <div class="result">
+      <span>Alcali à peser</span>
+      <strong id="alcali-reel">0 g</strong>
+    </div>
+    <div class="result">
+      <span>Eau à utiliser</span>
+      <strong id="eau">0 g</strong>
+    </div>
+  </div>
+  <br>
+  <div class="actions">
+    <button class="primary" onclick="calculer()">Calculer la formulation</button>
+    <button class="secondary" onclick="window.print()">Imprimer</button>
+  </div>
+  <p id="message" class="notice">
+    Complétez les masses des matières grasses pour obtenir les résultats.
+  </p>
+</section>
+
+<section class="panel">
+  <h2>05 — Rapport technique</h2>
+  <div id="rapport">
+    Le rapport de formulation apparaîtra après le calcul.
+  </div>
+</section>
+
+</main>
+
+<footer>
+  IFPCBI — Institut de Formation Professionnelle
+  Complexe Bio-Industriel<br>
+  Outil pédagogique de formulation cosmétique
+</footer>
+
+<script>
+function ajouterHuile() {
+  const ligne = document.createElement("tr");
+  ligne.innerHTML = `
+    <td>
+      <select class="huile">
+        <option value="coco">Huile de coco</option>
+        <option value="olive">Huile d'olive</option>
+        <option value="palme">Huile de palme</option>
+        <option value="ricin">Huile de ricin</option>
+        <option value="karite">Beurre de karité</option>
+        <option value="cacao">Beurre de cacao</option>
+        <option value="arachide">Huile d'arachide</option>
+        <option value="tournesol">Huile de tournesol</option>
+        <option value="soja">Huile de soja</option>
+        <option value="palmiste">Huile de palmiste</option>
+      </select>
+    </td>
+    <td><input type="number" class="masse" min="0" step="0.1" placeholder="Masse en g"></td>
+    <td><button class="danger" onclick="supprimerHuile(this)">X</button></td>
+  `;
+  document.getElementById("huile-list").appendChild(ligne);
+}
+
+function supprimerHuile(btn) {
+  const lignes = document.querySelectorAll("#huile-list tr");
+  if (lignes.length > 1) btn.closest("tr").remove();
+}
+
+</script>
+</body>
+</html>
