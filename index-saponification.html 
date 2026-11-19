@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculateur de Saponification Expert | IFPCBI Cameroun</title>
+
+  <meta name="description" content="Découvrez le calculateur expert de saponification IFPCBI : calcul NaOH, KOH, surgraissage, huiles, beurres, actifs, formulations et rapports techniques pour fabricants de savons.">
+
+  <meta name="keywords" content="calculateur saponification, calcul savon, indice SAP, NaOH, KOH, fabrication savon, formulation savonnerie, IFPCBI Cameroun">
+
+  <meta name="author" content="IFPCBI">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#102b40">
+
+  <meta property="og:title" content="IFPCBI Saponification Pro Expert">
+  <meta property="og:description" content="Un outil professionnel pour maîtriser les calculs de saponification et la formulation savonnière.">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6f8;
+      color: #243746;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #102b40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .brand {
+      color: #e3bd65;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    header h1 {
+      font-size: clamp(25px, 5vw, 42px);
+      margin: 15px 0;
+    }
+
+    header p {
+      max-width: 750px;
+      margin: auto;
+      color: #dce6ec;
+    }
+
+    .hero {
+      padding: 65px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #173b53, #102b40);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: clamp(25px, 5vw, 38px);
+      color: #e5c575;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 15px 28px;
+      background: #c8a34e;
+      color: #102b40;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .cta:hover {
+      background: #e5c575;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 18px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #173b53;
+      font-size: 27px;
+      margin-bottom: 25px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .feature {
+      background: white;
+      padding: 23px;
+      border-radius: 12px;
+      box-shadow: 0 3px 14px rgba(0,0,0,.07);
+      border-top: 4px solid #c8a34e;
+    }
+
+    .feature h3 {
+      color: #173b53;
+      margin-bottom: 10px;
+    }
+
+    .feature .emoji {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .how {
+      background: #e8eef2;
+    }
+
+    .steps {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .steps li {
+      margin: 12px 0;
+      padding-left: 8px;
+    }
+
+    .warning {
+      margin-top: 25px;
+      padding: 18px;
+      background: #fff4dc;
+      border-left: 5px solid #d49a27;
+      border-radius: 7px;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      background: white;
+      border-radius: 14px;
+      padding: 30px 20px;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 13px 23px;
+      background: #168b50;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      background: #102b40;
+      color: white;
+    }
+
+    footer strong {
+      color: #e5c575;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">IFPCBI ACADEMY</div>
+  <h1>SAPONIFICATION PRO EXPERT</h1>
+  <p>Calcul scientifique et accompagnement technique en formulation savonnière</p>
+</header>
+
+<section class="hero">
+  <h2>Maîtrisez vos formulations de savons</h2>
+  <p>
+    Découvrez un outil de calcul de saponification conçu pour accompagner
+    les formulateurs, les fabricants de savons, les apprenants et les
+    professionnels de la cosmétique dans leurs travaux de formulation.
+  </p>
+
+  <a class="cta"
+     href="calculateur-saponification.html">
+    ACCÉDER AU CALCULATEUR
+  </a>
+</section>
+
+<section class="container">
+  <h2 class="section-title">Un outil professionnel de formulation</h2>
+
+  <p class="intro">
+    IFPCBI Saponification Pro Expert est un calculateur pédagogique
+    destiné à faciliter les calculs de saponification, l'estimation
+    des quantités de bases alcalines et la préparation des formulations
+    savonnières.
+  </p>
+
+  <div class="features">
+
+    <article class="feature">
+      <div class="emoji">🧪</div>
+      <h3>Calcul NaOH et KOH</h3>
+      <p>Estimation des quantités de soude caustique et de potasse selon les matières grasses sélectionnées.</p>
+    </article>
+
+    <article class="feature">
+      <div class="emoji">🌿</div>
+      <h3>Bibliothèque des matières grasses</h3>
+      <p>Travail avec différentes huiles végétales, beurres et graisses utilisées en savonnerie.</p>
+    </article>
+
+    <article class="feature">
+      <div class="emoji">⚖️</div>
+      <h3>Surgraissage et pureté</h3>
+      <p>Prise en compte du surgraissage et de la pureté des bases alcalines dans les calculs.</p>
+    </article>
+
+    <article class="feature">
+      <div class="emoji">💧</div>
+      <h3>Gestion de l'eau</h3>
+      <p>Calcul de l'eau de dilution selon les paramètres de concentration retenus.</p>
+    </article>
+
+    <article class="feature">
+      <div class="emoji">✨</div>
+      <h3>Actifs et additifs</h3>
+      <p>Outil de gestion des ingrédients complémentaires et de leurs dosages dans les formulations.</p>
+    </article>
+
+    <article class="feature">
+      <div class="emoji">📄</div>
+      <h3>Rapports techniques</h3>
+      <p>Consultation et impression des résultats pour constituer un dossier technique de formulation.</p>
+    </article>
+
+    <article class="feature">
+      <div class="emoji">📚</div>
+      <h3>Gestion des formules</h3>
+      <p>Enregistrement, consultation, modification et sauvegarde des formulations dans le navigateur.</p>
+    </article>
+
+    <article class="feature">
+      <div class="emoji">📱</div>
+      <h3>Utilisation simplifiée</h3>
+      <p>Interface adaptée aux téléphones, tablettes et ordinateurs.</p>
+    </article>
+
+  </div>
+</section>
+
+<section class="how">
+  <div class="container">
+    <h2 class="section-title">Comment utiliser le calculateur ?</h2>
+
+    <ol class="steps">
+      <li>Accédez au calculateur Saponification Pro Expert.</li>
+      <li>Sélectionnez les huiles, beurres ou graisses de votre formule.</li>
+      <li>Indiquez les quantités de chaque matière grasse.</li>
+      <li>Choisissez la base alcaline et les paramètres de formulation.</li>
+      <li>Lancez le calcul et consultez les résultats.</li>
+      <li>Enregistrez votre formule ou imprimez votre rapport technique.</li>
+    </ol>
+
+    <div class="warning">
+      <strong>Important – Sécurité et contrôle qualité :</strong>
+      La soude caustique (NaOH) et la potasse (KOH) sont corrosives.
+      Leur manipulation exige des équipements de protection adaptés,
+      une ventilation appropriée et des procédures de sécurité.
+      Les valeurs SAP sont indicatives : vérifiez les spécifications
+      des fournisseurs et validez les formulations par des contrôles
+      analytiques avant toute production.
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="contact">
+    <h2 class="section-title">À propos de l'IFPCBI</h2>
+
+    <p>
+      L'Institut de Formation Professionnelle Complexe Bio-Industriel
+      accompagne la formation professionnelle dans les domaines de la
+      cosmétique, de la dermocosmétique, des soins capillaires,
+      de la formulation et des procédés industriels.
+    </p>
+
+    <p><strong>Douala – Cameroun</strong></p>
+
+    <p>Contact et informations sur le calculateur :</p>
+
+    <a class="whatsapp"
+       href="https://wa.me/237699895342?text=Bonjour%20IFPCBI%2C%20je%20souhaite%20des%20informations%20sur%20Saponification%20Pro%20Expert."
+       target="_blank"
+       rel="noopener noreferrer">
+      Contacter IFPCBI sur WhatsApp
+    </a>
+
+    <p style="margin-top:20px;">
+      <a href="calculateur-saponification.html">
+        Ouvrir le calculateur
+      </a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <strong>IFPCBI – Institut de Formation Professionnelle Complexe Bio-Industriel</strong>
+  <p>Développé pour la formation, la recherche et la maîtrise de la formulation savonnière.</p>
+  <p>Douala – Cameroun</p>
+  <p>© 2026 IFPCBI — Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
