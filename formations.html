@@ -5,54 +5,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Nos formations professionnelles | IFPCBI Cameroun</title>
+  <title>Formations professionnelles au Cameroun | IFPCBI Academy Douala</title>
 
-  <meta name="description" content="Découvrez les formations professionnelles de l'IFPCBI à Douala : cosmétique, dermocosmétique et cosmétique capillaire. Apprenez à formuler, fabriquer et commercialiser vos produits.">
+  <meta name="description" content="Découvrez les formations professionnelles de l'IFPCBI Academy à Douala, Cameroun : cosmétique, dermocosmétique, cosmétique capillaire, chimie industrielle et fabrication des produits d'entretien et d'hygiène. Formez-vous à la formulation, à la fabrication et au contrôle qualité.">
 
-  <meta name="keywords" content="formation cosmétique Cameroun, formation cosmétique Douala, formation dermocosmétique, formation capillaire, fabrication produits cosmétiques, IFPCBI">
+  <meta name="keywords" content="formation professionnelle Cameroun, formation Douala, formation cosmétique Cameroun, formation dermocosmétique, formation capillaire, formation chimie industrielle, fabrication produits entretien, IFPCBI Academy">
 
+  <meta name="author" content="IFPCBI Academy">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#071b36">
+
   <link rel="canonical" href="https://cbicosest-dotcom.github.io/ifpcbi-academy/formations.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nos formations professionnelles | IFPCBI Academy">
+  <meta property="og:description" content="Développez vos compétences en cosmétique, dermocosmétique, chimie industrielle et formulation professionnelle avec l'IFPCBI à Douala.">
+  <meta property="og:url" content="https://cbicosest-dotcom.github.io/ifpcbi-academy/formations.html">
+  <meta property="og:locale" content="fr_CM">
 
   <link rel="stylesheet" href="style.css">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: #263548;
+      background: #fff;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #071b36;
+      padding: 16px 20px;
+    }
+
+    nav {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #e5bd64;
+    }
+
     .catalogue-hero {
       background: linear-gradient(135deg, #071b36, #123d65);
       color: white;
-      padding: 65px 20px;
+      padding: 75px 20px;
       text-align: center;
     }
 
     .catalogue-hero h1 {
-      font-size: clamp(28px, 5vw, 44px);
-      margin-bottom: 18px;
+      font-size: clamp(28px, 5vw, 46px);
+      line-height: 1.25;
+      margin-bottom: 20px;
     }
 
     .catalogue-hero p {
       max-width: 850px;
       margin: auto;
-      line-height: 1.8;
+      line-height: 1.9;
       font-size: 17px;
+    }
+
+    .hero-label {
+      color: #e5bd64;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
     }
 
     .catalogue-container {
       max-width: 1150px;
       margin: auto;
-      padding: 45px 20px;
+      padding: 55px 20px;
     }
 
     .catalogue-intro {
       text-align: center;
-      max-width: 850px;
-      margin: 0 auto 40px;
-      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto 45px;
+      line-height: 1.9;
+    }
+
+    .catalogue-intro h2 {
+      color: #0b2948;
+      font-size: 29px;
     }
 
     .formation-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
       gap: 25px;
+      align-items: stretch;
     }
 
     .formation-card {
@@ -63,30 +127,40 @@
       box-shadow: 0 5px 18px rgba(0,0,0,.07);
       display: flex;
       flex-direction: column;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .formation-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,.12);
     }
 
     .formation-card-header {
-      background: #0b2948;
-      color: #fff;
+      background: linear-gradient(135deg, #0b2948, #123d65);
+      color: white;
       padding: 25px 20px;
-      min-height: 125px;
+      min-height: 130px;
     }
 
     .formation-card-header span {
       color: #e5bd64;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: bold;
+      letter-spacing: 1px;
     }
 
     .formation-card-header h2 {
-      margin-top: 12px;
+      margin-top: 10px;
       font-size: 22px;
+      line-height: 1.4;
     }
 
     .formation-card-content {
-      padding: 22px;
+      padding: 23px;
       flex: 1;
-      line-height: 1.7;
+      line-height: 1.75;
+      display: flex;
+      flex-direction: column;
     }
 
     .formation-card-content ul {
@@ -98,15 +172,21 @@
       margin-bottom: 8px;
     }
 
+    .formation-card-content strong {
+      color: #0b2948;
+    }
+
     .formation-link {
       display: inline-block;
       background: #b68a35;
       color: white;
+      text-align: center;
       text-decoration: none;
-      padding: 12px 18px;
-      border-radius: 6px;
+      padding: 13px 18px;
+      border-radius: 7px;
       font-weight: bold;
-      margin-top: 12px;
+      margin-top: auto;
+      transition: background .2s;
     }
 
     .formation-link:hover {
@@ -115,10 +195,10 @@
 
     .catalogue-benefits {
       background: #f3f6fa;
-      border-radius: 12px;
-      padding: 30px;
-      margin-top: 50px;
-      line-height: 1.8;
+      border-radius: 14px;
+      padding: 35px;
+      margin-top: 55px;
+      line-height: 1.9;
     }
 
     .catalogue-benefits h2 {
@@ -126,47 +206,191 @@
       margin-bottom: 15px;
     }
 
+    .catalogue-benefits li {
+      margin-bottom: 10px;
+    }
+
+    .catalogue-process {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .catalogue-process h2 {
+      color: #0b2948;
+      font-size: 28px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .process-item {
+      background: #f3f6fa;
+      padding: 25px 18px;
+      border-radius: 12px;
+    }
+
+    .process-item h3 {
+      color: #0b2948;
+      margin-bottom: 10px;
+    }
+
+    .process-number {
+      color: #b68a35;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
     .catalogue-contact {
       background: #0b2948;
       color: white;
       text-align: center;
-      padding: 45px 20px;
-      margin-top: 45px;
-      border-radius: 12px;
+      padding: 50px 20px;
+      margin-top: 55px;
+      border-radius: 14px;
+    }
+
+    .catalogue-contact h2 {
+      font-size: 28px;
+    }
+
+    .catalogue-contact p {
+      max-width: 750px;
+      margin: auto;
     }
 
     .catalogue-contact a {
       display: inline-block;
-      margin-top: 18px;
-      padding: 13px 22px;
+      margin-top: 22px;
+      padding: 14px 25px;
       background: #b68a35;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 7px;
       font-weight: bold;
     }
+
+    .catalogue-contact a:hover {
+      background: #8d6725;
+    }
+
+    footer {
+      background: #06152a;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 8px 0;
+    }
+
+    footer a {
+      color: #e5bd64;
+      text-decoration: none;
+    }
+
+    @media(max-width: 600px) {
+      header {
+        padding: 15px 10px;
+      }
+
+      nav {
+        gap: 12px 16px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .catalogue-hero {
+        padding: 50px 18px;
+      }
+
+      .catalogue-hero p {
+        font-size: 15px;
+      }
+
+      .catalogue-container {
+        padding: 35px 15px;
+      }
+
+      .catalogue-intro h2 {
+        font-size: 24px;
+      }
+
+      .formation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .catalogue-benefits {
+        padding: 23px 18px;
+      }
+
+      .catalogue-contact {
+        padding: 35px 18px;
+      }
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "IFPCBI Academy",
+    "legalName": "Institut de Formation Professionnelle Complexe Bio-Industriel",
+    "url": "https://cbicosest-dotcom.github.io/ifpcbi-academy/",
+    "telephone": "+237699895342",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Douala",
+      "addressCountry": "CM"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Cameroun"
+    },
+    "knowsAbout": [
+      "Formation en cosmétique",
+      "Formation en dermocosmétique",
+      "Cosmétique capillaire",
+      "Chimie industrielle",
+      "Fabrication des produits d'entretien et d'hygiène"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
 <header>
-  <nav>
+  <nav aria-label="Navigation principale">
     <a href="index.html">Accueil</a>
     <a href="formations.html">Formations</a>
     <a href="cosmetique.html">Cosmétique</a>
     <a href="dermocosmetique.html">Dermocosmétique</a>
     <a href="cosmetique-capillaire.html">Cosmétique capillaire</a>
+    <a href="chimie-industrielle.html">Chimie industrielle</a>
+    <a href="produits-entretien.html">Produits d'entretien</a>
   </nav>
 </header>
 
 <section class="catalogue-hero">
+  <div class="hero-label">IFPCBI ACADEMY • DOUALA • CAMEROUN</div>
+
   <h1>Nos formations professionnelles</h1>
+
   <p>
     Développez vos compétences scientifiques, techniques et entrepreneuriales
     avec l'Institut de Formation Professionnelle Complexe Bio-Industriel.
-    Apprenez à concevoir, formuler, fabriquer et commercialiser des produits
-    professionnels.
+    Apprenez à concevoir, formuler, fabriquer, contrôler et commercialiser
+    des produits professionnels grâce à une formation associant théorie
+    scientifique et pratique en laboratoire.
   </p>
 </section>
 
@@ -174,16 +398,23 @@
 
   <section class="catalogue-intro">
     <h2>Construisez votre expertise avec l'IFPCBI</h2>
+
     <p>
       L'IFPCBI propose des formations professionnelles axées sur
       l'apprentissage pratique, la compréhension scientifique et la maîtrise
       des procédés de fabrication. Nos programmes permettent aux apprenants
-      d'acquérir des compétences utiles pour travailler dans les secteurs
-      de la cosmétique, de la dermocosmétique et de la formulation capillaire.
+      d'acquérir des compétences dans les secteurs de la cosmétique,
+      de la dermocosmétique, de la formulation capillaire, de la chimie
+      industrielle et de la fabrication des produits d'entretien et d'hygiène.
+    </p>
+
+    <p>
+      Que vous soyez débutant, professionnel, porteur de projet ou entrepreneur,
+      découvrez nos spécialités et développez votre savoir-faire.
     </p>
   </section>
 
-  <section class="formation-grid">
+  <section class="formation-grid" aria-label="Catalogue des formations">
 
     <article class="formation-card">
       <div class="formation-card-header">
@@ -199,6 +430,7 @@
         </p>
 
         <strong>Vous apprendrez notamment à :</strong>
+
         <ul>
           <li>Identifier et sélectionner les matières premières.</li>
           <li>Comprendre les fonctions des ingrédients cosmétiques.</li>
@@ -209,7 +441,7 @@
         </ul>
 
         <a class="formation-link" href="cosmetique.html">
-          Découvrir la formation
+          Découvrir la formation →
         </a>
       </div>
     </article>
@@ -228,6 +460,7 @@
         </p>
 
         <strong>Vous apprendrez notamment à :</strong>
+
         <ul>
           <li>Étudier l'anatomie et la physiologie de la peau.</li>
           <li>Comprendre la barrière cutanée et le pH.</li>
@@ -238,7 +471,7 @@
         </ul>
 
         <a class="formation-link" href="dermocosmetique.html">
-          Découvrir la formation
+          Découvrir la formation →
         </a>
       </div>
     </article>
@@ -257,6 +490,7 @@
         </p>
 
         <strong>Vous apprendrez notamment à :</strong>
+
         <ul>
           <li>Étudier l'anatomie et la physiologie du cheveu.</li>
           <li>Réaliser un diagnostic capillaire.</li>
@@ -267,75 +501,77 @@
         </ul>
 
         <a class="formation-link" href="cosmetique-capillaire.html">
-          Découvrir la formation
+          Découvrir la formation →
         </a>
       </div>
     </article>
 
-<article class="formation-card">
-  <div class="formation-card-header">
-    <span>SPÉCIALITÉ 04</span>
-    <h2>Chimie industrielle</h2>
-  </div>
+    <article class="formation-card">
+      <div class="formation-card-header">
+        <span>SPÉCIALITÉ 04</span>
+        <h2>Chimie industrielle</h2>
+      </div>
 
-  <div class="formation-card-content">
-    <p>
-      Découvrez les sciences et les techniques de transformation
-      industrielle des matières premières. Développez vos compétences
-      en procédés chimiques, analyses et contrôle qualité.
-    </p>
+      <div class="formation-card-content">
+        <p>
+          Découvrez les sciences et les techniques de transformation
+          industrielle des matières premières. Développez vos compétences
+          en procédés chimiques, analyses et contrôle qualité.
+        </p>
 
-    <strong>Vous apprendrez notamment à :</strong>
-    <ul>
-      <li>Maîtriser les bases de la chimie générale et organique.</li>
-      <li>Comprendre les réactions et transformations chimiques.</li>
-      <li>Étudier les opérations unitaires industrielles.</li>
-      <li>Utiliser les équipements de laboratoire.</li>
-      <li>Réaliser des analyses physico-chimiques.</li>
-      <li>Contrôler la qualité des produits fabriqués.</li>
-      <li>Appliquer les règles de sécurité industrielle.</li>
-    </ul>
+        <strong>Vous apprendrez notamment à :</strong>
 
-    <a class="formation-link" href="chimie-industrielle.html">
-      Découvrir la formation
-    </a>
-  </div>
-</article>
+        <ul>
+          <li>Maîtriser les bases de la chimie générale et organique.</li>
+          <li>Comprendre les réactions et transformations chimiques.</li>
+          <li>Étudier les opérations unitaires industrielles.</li>
+          <li>Utiliser les équipements de laboratoire.</li>
+          <li>Réaliser des analyses physico-chimiques.</li>
+          <li>Contrôler la qualité des produits fabriqués.</li>
+          <li>Appliquer les règles de sécurité industrielle.</li>
+        </ul>
 
+        <a class="formation-link" href="chimie-industrielle.html">
+          Découvrir la formation →
+        </a>
+      </div>
+    </article>
 
-<article class="formation-card">
-  <div class="formation-card-header">
-    <span>SPÉCIALITÉ 05</span>
-    <h2>Produits d'entretien et d'hygiène</h2>
-  </div>
+    <article class="formation-card">
+      <div class="formation-card-header">
+        <span>SPÉCIALITÉ 05</span>
+        <h2>Produits d'entretien et d'hygiène</h2>
+      </div>
 
-  <div class="formation-card-content">
-    <p>
-      Apprenez à formuler, fabriquer et contrôler des produits destinés
-      au nettoyage, à l'entretien et à l'hygiène des surfaces et des locaux.
-    </p>
+      <div class="formation-card-content">
+        <p>
+          Apprenez à formuler, fabriquer et contrôler des produits destinés
+          au nettoyage, à l'entretien et à l'hygiène des surfaces et des locaux.
+        </p>
 
-    <strong>Vous apprendrez notamment à :</strong>
-    <ul>
-      <li>Comprendre la chimie des tensioactifs et de la détergence.</li>
-      <li>Identifier les matières premières et leurs fonctions.</li>
-      <li>Formuler des liquides vaisselle et des lessives.</li>
-      <li>Fabriquer des nettoyants sols, vitres et surfaces.</li>
-      <li>Étudier les dégraissants et produits sanitaires.</li>
-      <li>Contrôler le pH, la viscosité et la stabilité.</li>
-      <li>Appliquer les règles de sécurité et calculer les coûts de production.</li>
-    </ul>
+        <strong>Vous apprendrez notamment à :</strong>
 
-    <a class="formation-link" href="produits-entretien.html">
-      Découvrir la formation
-    </a>
-  </div>
-</article>
+        <ul>
+          <li>Comprendre la chimie des tensioactifs et de la détergence.</li>
+          <li>Identifier les matières premières et leurs fonctions.</li>
+          <li>Formuler des liquides vaisselle et des lessives.</li>
+          <li>Fabriquer des nettoyants sols, vitres et surfaces.</li>
+          <li>Étudier les dégraissants et produits sanitaires.</li>
+          <li>Contrôler le pH, la viscosité et la stabilité.</li>
+          <li>Appliquer les règles de sécurité et calculer les coûts de production.</li>
+        </ul>
+
+        <a class="formation-link" href="produits-entretien.html">
+          Découvrir la formation →
+        </a>
+      </div>
+    </article>
 
   </section>
 
   <section class="catalogue-benefits">
     <h2>Pourquoi choisir l'IFPCBI ?</h2>
+
     <p>
       Notre approche pédagogique associe les connaissances scientifiques
       à la pratique professionnelle en laboratoire.
@@ -347,6 +583,7 @@
       <li>Un apprentissage des matières premières et des procédés.</li>
       <li>Une initiation au contrôle qualité et aux bonnes pratiques.</li>
       <li>Une orientation vers l'entrepreneuriat et la création de marque.</li>
+      <li>Des programmes adaptés aux exigences des métiers de la formulation.</li>
     </ul>
 
     <p>
@@ -355,14 +592,50 @@
     </p>
   </section>
 
+  <section class="catalogue-process">
+    <h2>Développez votre savoir-faire en quatre étapes</h2>
+
+    <div class="process-grid">
+
+      <div class="process-item">
+        <div class="process-number">01</div>
+        <h3>Comprendre</h3>
+        <p>Acquérir les connaissances scientifiques et techniques.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">02</div>
+        <h3>Apprendre</h3>
+        <p>Identifier les matières premières et maîtriser les procédés.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">03</div>
+        <h3>Pratiquer</h3>
+        <p>Réaliser des formulations et des travaux pratiques.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">04</div>
+        <h3>Entreprendre</h3>
+        <p>Développer ses compétences et concrétiser ses projets.</p>
+      </div>
+
+    </div>
+  </section>
+
   <section class="catalogue-contact">
-    <h2>Vous souhaitez vous inscrire ?</h2>
+    <h2>Prêt à développer votre expertise ?</h2>
+
     <p>
       Contactez l'équipe IFPCBI pour obtenir les informations sur les
-      programmes, les conditions d'admission et les prochaines sessions.
+      programmes, les conditions d'admission, les frais de formation
+      et les prochaines sessions.
     </p>
 
-    <a href="https://wa.me/237699895342" target="_blank" rel="noopener">
+    <a href="https://wa.me/237699895342?text=Bonjour%20IFPCBI%2C%20je%20souhaite%20obtenir%20des%20informations%20sur%20vos%20formations%20professionnelles."
+       target="_blank"
+       rel="noopener noreferrer">
       Contacter IFPCBI sur WhatsApp
     </a>
   </section>
@@ -370,14 +643,20 @@
 </main>
 
 <footer>
-  <p>IFPCBI — Institut de Formation Professionnelle Complexe Bio-Industriel</p>
+  <p><strong>IFPCBI ACADEMY</strong></p>
+  <p>Institut de Formation Professionnelle Complexe Bio-Industriel</p>
   <p>Apprendre • Comprendre • Réussir • Savoir-faire</p>
   <p>Douala, Cameroun | WhatsApp : +237 699 89 53 42</p>
+  <p>
+    <a href="index.html">Accueil</a> |
+    <a href="formations.html">Nos formations</a>
+  </p>
   <p>© <span id="annee"></span> IFPCBI. Tous droits réservés.</p>
 </footer>
 
 <script>
-  document.getElementById("annee").textContent = new Date().getFullYear();
+  document.getElementById("annee").textContent =
+    new Date().getFullYear();
 </script>
 
 </body>
