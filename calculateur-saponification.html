@@ -1,4 +1,4 @@
-
+un
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -476,70 +476,202 @@ footer {
 // de matière grasse.
 // Valeurs indicatives à confirmer par fournisseur.
 
+
+  
+// ==============================================
+// BIBLIOTHEQUE SCIENTIFIQUE IFPCBI
+// 25 MATIERES GRASSES
+// SAP NaOH : gramme de NaOH / gramme de matière
+// ==============================================
+
 const BIBLIOTHEQUE = {
+
+  // HUILES ET BEURRES DEJA INTEGRES
 
   coco: {
     nom:"Huile de coco",
+    categorie:"Huile tropicale",
     naoh:0.183,
     source:"Valeur indicative"
   },
 
   olive: {
     nom:"Huile d'olive",
+    categorie:"Huile végétale",
     naoh:0.134,
     source:"Valeur indicative"
   },
 
   palme: {
     nom:"Huile de palme",
+    categorie:"Huile tropicale",
     naoh:0.142,
     source:"Valeur indicative"
   },
 
   ricin: {
     nom:"Huile de ricin",
+    categorie:"Huile végétale",
     naoh:0.128,
     source:"Valeur indicative"
   },
 
   karite: {
     nom:"Beurre de karité",
+    categorie:"Beurre végétal",
     naoh:0.128,
     source:"Valeur indicative"
   },
 
   cacao: {
     nom:"Beurre de cacao",
+    categorie:"Beurre végétal",
     naoh:0.137,
     source:"Valeur indicative"
   },
 
   arachide: {
     nom:"Huile d'arachide",
+    categorie:"Huile végétale",
     naoh:0.136,
     source:"Valeur indicative"
   },
 
   tournesol: {
     nom:"Huile de tournesol",
+    categorie:"Huile végétale",
     naoh:0.135,
     source:"Valeur indicative"
   },
 
   soja: {
     nom:"Huile de soja",
+    categorie:"Huile végétale",
     naoh:0.136,
     source:"Valeur indicative"
   },
 
   palmiste: {
     nom:"Huile de palmiste",
+    categorie:"Huile tropicale",
     naoh:0.176,
     source:"Valeur indicative"
+  },
+
+  // NOUVELLES HUILES VEGETALES
+
+  avocat: {
+    nom:"Huile d'avocat",
+    categorie:"Huile végétale",
+    naoh:0.133,
+    source:"Table comparative SAP"
+  },
+
+  amande: {
+    nom:"Huile d'amande douce",
+    categorie:"Huile végétale",
+    naoh:0.139,
+    source:"Table comparative SAP"
+  },
+
+  argan: {
+    nom:"Huile d'argan",
+    categorie:"Huile végétale",
+    naoh:0.136,
+    source:"Table comparative SAP"
+  },
+
+  abricot: {
+    nom:"Huile de noyau d'abricot",
+    categorie:"Huile végétale",
+    naoh:0.139,
+    source:"Table comparative SAP"
+  },
+
+  babassu: {
+    nom:"Huile de babassu",
+    categorie:"Huile tropicale",
+    naoh:0.175,
+    source:"Table comparative SAP"
+  },
+
+  pepinsraisin: {
+    nom:"Huile de pépins de raisin",
+    categorie:"Huile végétale",
+    naoh:0.134,
+    source:"Table comparative SAP"
+  },
+
+  riz: {
+    nom:"Huile de son de riz",
+    categorie:"Huile végétale",
+    naoh:0.133,
+    source:"Table comparative SAP"
+  },
+
+  canola: {
+    nom:"Huile de colza (canola)",
+    categorie:"Huile végétale",
+    naoh:0.133,
+    source:"Table comparative SAP"
+  },
+
+  sesame: {
+    nom:"Huile de sésame",
+    categorie:"Huile végétale",
+    naoh:0.133,
+    source:"Table comparative SAP"
+  },
+
+  mais: {
+    nom:"Huile de maïs",
+    categorie:"Huile végétale",
+    naoh:0.136,
+    source:"Table comparative SAP"
+  },
+
+  neem: {
+    nom:"Huile de neem",
+    categorie:"Huile végétale",
+    naoh:0.138,
+    source:"Table comparative SAP"
+  },
+
+  // BEURRES VEGETAUX
+
+  mangue: {
+    nom:"Beurre de mangue",
+    categorie:"Beurre végétal",
+    naoh:0.136,
+    source:"Table comparative SAP"
+  },
+
+  kokum: {
+    nom:"Beurre de kokum",
+    categorie:"Beurre végétal",
+    naoh:0.135,
+    source:"Table comparative SAP"
+  },
+
+  // GRAISSES ANIMALES
+
+  suif: {
+    nom:"Suif de bœuf",
+    categorie:"Graisse animale",
+    naoh:0.143,
+    source:"Table comparative SAP"
+  },
+
+  saindoux: {
+    nom:"Saindoux",
+    categorie:"Graisse animale",
+    naoh:0.141,
+    source:"Table comparative SAP"
   }
 
 };
 
+    
 // Rapport des masses molaires KOH / NaOH
 const FACTEUR_KOH = 56.1056 / 39.997;
 
