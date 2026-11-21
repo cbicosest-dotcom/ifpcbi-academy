@@ -1,24 +1,41 @@
 
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://cbicosest-dotcom.github.io/ifpcbi-academy/</loc>
   </url>
+
   <url>
     <loc>https://cbicosest-dotcom.github.io/ifpcbi-academy/formations.html</loc>
   </url>
+
   <url>
     <loc>https://cbicosest-dotcom.github.io/ifpcbi-academy/cosmetique.html</loc>
   </url>
+
   <url>
     <loc>https://cbicosest-dotcom.github.io/ifpcbi-academy/dermocosmetique.html</loc>
   </url>
+
   <url>
     <loc>https://cbicosest-dotcom.github.io/ifpcbi-academy/cosmetique-capillaire.html</loc>
   </url>
+
   <url>
     <loc>https://cbicosest-dotcom.github.io/ifpcbi-academy/chimie-industrielle.html</loc>
   </url>
+
   <url>
     <loc>https://cbicosest-dotcom.github.io/ifpcbi-academy/produits-entretien.html</loc>
   </url>
+
+  <url>
+    <loc>https://cbicosest-dotcom.github.io/ifpcbi-academy/index-saponification.html</loc>
+  </url>
+
+  <url>
+    <loc>https://cbicosest-dotcom.github.io/ifpcbi-academy/calculateur-saponification.html</loc>
+  </url>
+
 </urlset>
