@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<
 <head>
   <!-- Encodage et affichage -->
   <meta charset="UTF-8">
@@ -11,30 +10,50 @@
   <!-- Vérification Google Search Console -->
   <meta name="google-site-verification" content="8yeUN_K-SgW5qcbl8j4ZGmCSliK8-bh24KfD6BWRIQE">
 
-  <!-- Référencement naturel SEO -->
-  <title>IFPCBI Academy | Formations en Cosmétique à Douala, Cameroun</title>
+  <!-- Référencement SEO -->
+  <title>IFPCBI Academy | Formations professionnelles en Cosmétique à Douala</title>
 
-  <meta name="description" content="IFPCBI Academy : formations professionnelles en cosmétique, dermocosmétique, cosmétique capillaire, chimie industrielle et produits d'entretien à Douala, Cameroun.">
+  <meta name="description" content="IFPCBI Academy à Douala, Cameroun : formations professionnelles en cosmétique, dermocosmétique, soins capillaires, chimie industrielle et fabrication de produits d'entretien.">
 
-  <meta name="keywords" content="IFPCBI Academy, formation cosmétique Cameroun, formation cosmétique Douala, formation dermocosmétique, formulation cosmétique, formation capillaire, chimie industrielle, fabrication produits d'entretien">
+  <meta name="keywords" content="IFPCBI Academy, formation cosmétique Cameroun, formation cosmétique Douala, formation dermocosmétique, formulation cosmétique, formation capillaire, chimie industrielle, fabrication savon, produits entretien">
 
   <meta name="author" content="IFPCBI - Institut de Formation Professionnelle Complexe Bio-Industriel">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="French">
+  <meta name="theme-color" content="#102B46">
 
   <!-- URL officielle -->
   <link rel="canonical" href="https://cbicosest-dotcom.github.io/ifpcbi-academy/">
 
-  <!-- Réseaux sociaux : Facebook et autres -->
+  <!-- Réseaux sociaux -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="IFPCBI Academy">
   <meta property="og:title" content="IFPCBI Academy - Formations professionnelles au Cameroun">
-  <meta property="og:description" content="Développez vos compétences en cosmétique, dermocosmétique, soins capillaires et chimie industrielle avec l'IFPCBI Academy à Douala.">
+  <meta property="og:description" content="Formez-vous aux métiers de la cosmétique, de la dermocosmétique, des soins capillaires et de la chimie industrielle avec IFPCBI Academy à Douala.">
   <meta property="og:url" content="https://cbicosest-dotcom.github.io/ifpcbi-academy/">
 
-  <!-- Couleur du navigateur mobile -->
-  <meta name="theme-color" content="#102B46">
+  <!-- Données structurées pour les moteurs de recherche -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "IFPCBI Academy",
+    "alternateName": "Institut de Formation Professionnelle Complexe Bio-Industriel",
+    "url": "https://cbicosest-dotcom.github.io/ifpcbi-academy/",
+    "description": "Institut de formation professionnelle spécialisé en cosmétique, dermocosmétique, cosmétique capillaire, chimie industrielle et produits d'entretien.",
+    "telephone": "+237699895342",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Douala",
+      "addressCountry": "CM"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Cameroun"
+    },
+    "availableLanguage": "French"
+  }
+  </script>
 
   <!-- Feuille de style -->
   <link rel="stylesheet" href="style.css">
@@ -46,15 +65,16 @@
 <header class="header">
   <div class="container nav">
 
-    <a href="index.html" class="logo">
+    <a href="index.html" class="logo" aria-label="Accueil IFPCBI Academy">
       <span>IFPCBI</span>
       <small>ACADEMY</small>
     </a>
 
-    <nav>
+    <nav aria-label="Navigation principale">
       <a href="#accueil">Accueil</a>
       <a href="#formations">Formations</a>
       <a href="#apropos">À propos</a>
+      <a href="#outils">Outils pédagogiques</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -65,6 +85,7 @@
 
 <main>
 
+<!-- ACCUEIL -->
 <section class="hero" id="accueil">
   <div class="container hero-content">
 
@@ -78,7 +99,8 @@
     <p>
       Bienvenue à IFPCBI ACADEMY, votre partenaire de formation
       professionnelle dans les domaines de la cosmétique,
-      de la dermocosmétique et de la chimie industrielle.
+      de la dermocosmétique, des soins capillaires et de la
+      chimie industrielle au Cameroun.
     </p>
 
     <div class="hero-buttons">
@@ -93,10 +115,12 @@
   </div>
 </section>
 
+<!-- PRESENTATION -->
 <section class="section" id="apropos">
   <div class="container">
 
     <p class="eyebrow">QUI SOMMES-NOUS ?</p>
+
     <h2>Bienvenue à IFPCBI ACADEMY</h2>
 
     <p>
@@ -106,91 +130,99 @@
 
       Notre mission est de transmettre des connaissances scientifiques
       et pratiques permettant aux apprenants de maîtriser les techniques
-      de formulation, de fabrication et de contrôle qualité.
+      de formulation, de fabrication, d'analyse et de contrôle qualité.
+
+      Nos formations associent les connaissances théoriques aux travaux
+      pratiques afin de développer un véritable savoir-faire professionnel.
     </p>
 
   </div>
 </section>
 
+<!-- DOMAINES DE FORMATION -->
 <section class="section formations" id="formations">
   <div class="container">
 
     <p class="eyebrow">NOTRE OFFRE DE FORMATION</p>
+
     <h2>Nos domaines de formation</h2>
 
     <div class="formation-grid">
 
       <article class="formation-card">
         <h3>Cosmétique</h3>
-        <p>Apprenez la formulation et la fabrication des produits cosmétiques.</p>
-        <a href="#inscription">En savoir plus →</a>
+        <p>
+          Apprenez la formulation, la fabrication et le contrôle
+          qualité des produits cosmétiques.
+        </p>
+        <a href="cosmetique.html">Découvrir la formation →</a>
       </article>
 
       <article class="formation-card">
         <h3>Dermocosmétique</h3>
-        <p>Maîtrisez les soins de la peau et la formulation dermocosmétique.</p>
-        <a href="#inscription">En savoir plus →</a>
+        <p>
+          Étudiez la peau, les actifs et la formulation
+          des soins dermocosmétiques.
+        </p>
+        <a href="dermocosmetique.html">Découvrir la formation →</a>
       </article>
 
       <article class="formation-card">
         <h3>Cosmétique capillaire</h3>
-        <p>Découvrez la formulation professionnelle des soins capillaires.</p>
-        <a href="#inscription">En savoir plus →</a>
+        <p>
+          Découvrez l'anatomie du cheveu et la formulation
+          professionnelle des soins capillaires.
+        </p>
+        <a href="cosmetique-capillaire.html">Découvrir la formation →</a>
       </article>
 
       <article class="formation-card">
         <h3>Chimie industrielle</h3>
-        <p>Développez vos compétences en procédés et production industrielle.</p>
-        <a href="#inscription">En savoir plus →</a>
+        <p>
+          Développez vos compétences en procédés industriels,
+          production et contrôle qualité.
+        </p>
+        <a href="chimie-industrielle.html">Découvrir la formation →</a>
       </article>
 
       <article class="formation-card">
         <h3>Produits d'entretien</h3>
-        <p>Apprenez à fabriquer des détergents et produits ménagers.</p>
-        <a href="#inscription">En savoir plus →</a>
+        <p>
+          Apprenez à formuler et fabriquer des détergents,
+          nettoyants et produits d'hygiène.
+        </p>
+        <a href="produits-entretien.html">Découvrir la formation →</a>
       </article>
 
       <article class="formation-card">
         <h3>Formations en ligne</h3>
-        <p>Développez vos compétences professionnelles à distance.</p>
-        <a href="#inscription">En savoir plus →</a>
+        <p>
+          Développez vos compétences professionnelles
+          grâce à nos programmes de formation à distance.
+        </p>
+        <a href="formations.html">Découvrir les programmes →</a>
       </article>
 
     </div>
   </div>
 </section>
 
-<section class="section inscription" id="inscription">
-  <div class="container">
-    <h2>Donnez une nouvelle dimension à votre avenir professionnel.</h2>
-    <p>Contactez notre administration pour obtenir les informations sur les inscriptions et les programmes.</p>
-
-    <a class="btn" href="https://wa.me/237699895342?text=Bonjour%20IFPCBI%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20une%20formation.">
-      S'inscrire via WhatsApp
-    </a>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="container">
-    <h2>Contactez IFPCBI</h2>
-    <p>Téléphone / WhatsApp : +237 699 89 53 42</p>
-    <p>Douala, Cameroun</p>
-    <a href="https://wa.me/237699895342" class="btn">Contacter l'administration</a>
-  </div>
-</section>
-
-
+<!-- PRESENTATION DETAILLEE DES FORMATIONS -->
 <section class="formations-section">
+
   <div class="section-heading">
+
     <span class="section-label">NOS FORMATIONS PROFESSIONNELLES</span>
+
     <h2>Développez vos compétences avec l'IFPCBI</h2>
+
     <p>
       Découvrez nos programmes de formation professionnelle,
       scientifique et technique. Acquérez des connaissances solides,
       maîtrisez les techniques de fabrication et développez votre
       savoir-faire pour construire votre avenir professionnel.
     </p>
+
   </div>
 
   <div class="formation-grid">
@@ -200,13 +232,15 @@
         <span>SPÉCIALITÉ 01</span>
         <h2>Cosmétique</h2>
       </div>
+
       <div class="formation-card-content">
         <p>
           Apprenez la formulation, la fabrication et le contrôle
           qualité des produits cosmétiques.
         </p>
+
         <a class="formation-link" href="cosmetique.html">
-          Découvrir la formation
+          Découvrir la formation →
         </a>
       </div>
     </article>
@@ -216,13 +250,15 @@
         <span>SPÉCIALITÉ 02</span>
         <h2>Dermocosmétique</h2>
       </div>
+
       <div class="formation-card-content">
         <p>
           Étudiez la peau, ses fonctions, les actifs dermocosmétiques
           et la formulation des soins adaptés.
         </p>
+
         <a class="formation-link" href="dermocosmetique.html">
-          Découvrir la formation
+          Découvrir la formation →
         </a>
       </div>
     </article>
@@ -232,13 +268,15 @@
         <span>SPÉCIALITÉ 03</span>
         <h2>Cosmétique capillaire</h2>
       </div>
+
       <div class="formation-card-content">
         <p>
           Maîtrisez l'anatomie du cheveu, le diagnostic capillaire
           et la formulation des soins professionnels.
         </p>
+
         <a class="formation-link" href="cosmetique-capillaire.html">
-          Découvrir la formation
+          Découvrir la formation →
         </a>
       </div>
     </article>
@@ -248,13 +286,15 @@
         <span>SPÉCIALITÉ 04</span>
         <h2>Chimie industrielle</h2>
       </div>
+
       <div class="formation-card-content">
         <p>
           Découvrez les procédés industriels, les opérations
           unitaires, les analyses et le contrôle qualité.
         </p>
+
         <a class="formation-link" href="chimie-industrielle.html">
-          Découvrir la formation
+          Découvrir la formation →
         </a>
       </div>
     </article>
@@ -264,28 +304,147 @@
         <span>SPÉCIALITÉ 05</span>
         <h2>Produits d'entretien et d'hygiène</h2>
       </div>
+
       <div class="formation-card-content">
         <p>
           Apprenez à formuler et fabriquer des détergents,
           nettoyants, dégraissants et produits d'hygiène.
         </p>
+
         <a class="formation-link" href="produits-entretien.html">
-          Découvrir la formation
+          Découvrir la formation →
         </a>
       </div>
     </article>
 
   </div>
+
+</section>
+
+<!-- OUTILS PEDAGOGIQUES -->
+<section class="section" id="outils">
+
+  <div class="container">
+
+    <p class="eyebrow">OUTILS PÉDAGOGIQUES IFPCBI</p>
+
+    <h2>Nos outils de formulation professionnelle</h2>
+
+    <article class="formation-card">
+
+      <h3>Calculateur de Saponification Pro Expert</h3>
+
+      <p>
+        Découvrez notre calculateur de saponification en ligne
+        développé pour accompagner les apprenants, formulateurs
+        et professionnels dans leurs travaux de formulation
+        de savons.
+
+        Calculez les quantités de NaOH et KOH, exploitez les
+        indices SAP, gérez le surgraissage, l'eau et les additifs
+        de vos formulations savonnières.
+      </p>
+
+      <a href="index-saponification.html">
+        Découvrir le calculateur →
+      </a>
+
+      <p>
+        <a href="calculateur-saponification.html">
+          Accéder directement à l'application →
+        </a>
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+<!-- INSCRIPTION -->
+<section class="section inscription" id="inscription">
+
+  <div class="container">
+
+    <h2>
+      Donnez une nouvelle dimension à votre avenir professionnel.
+    </h2>
+
+    <p>
+      Contactez notre administration pour obtenir les informations
+      sur les inscriptions, les programmes et les modalités de formation.
+    </p>
+
+    <a
+      class="btn"
+      href="https://wa.me/237699895342?text=Bonjour%20IFPCBI%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20une%20formation."
+    >
+      S'inscrire via WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+
+  <div class="container">
+
+    <h2>Contactez IFPCBI</h2>
+
+    <p>
+      IFPCBI — Institut de Formation Professionnelle
+      Complexe Bio-Industriel
+    </p>
+
+    <p>Téléphone / WhatsApp : +237 699 89 53 42</p>
+
+    <p>Douala, Cameroun</p>
+
+    <a
+      href="https://wa.me/237699895342"
+      class="btn"
+    >
+      Contacter l'administration
+    </a>
+
+  </div>
+
 </section>
 
 </main>
 
+<!-- PIED DE PAGE -->
 <footer>
-  <p>© 2026 IFPCBI ACADEMY – Tous droits réservés.</p>
-  <p>Institut de Formation Professionnelle Complexe Bio-Industriel</p>
+
+  <p>
+    © 2026 IFPCBI ACADEMY – Tous droits réservés.
+  </p>
+
+  <p>
+    Institut de Formation Professionnelle Complexe Bio-Industriel
+  </p>
+
+  <p>
+    Douala – Cameroun
+  </p>
+
+  <p>
+    <a href="index.html">Accueil</a> |
+    <a href="formations.html">Formations</a> |
+    <a href="index-saponification.html">Calculateur de saponification</a> |
+    <a href="#contact">Contact</a>
+  </p>
+
+  <p>
+    APPRENDRE • COMPRENDRE • RÉUSSIR • SAVOIR-FAIRE
+  </p>
+
 </footer>
 
-<script src="app.js"></script>
+<!-- JavaScript -->
+<script src="app.js" defer></script>
 
 </body>
 </html>
